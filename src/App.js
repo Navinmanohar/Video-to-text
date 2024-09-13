@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import './App.css'
 import "./components/test.css"
 import Footer from './components/Footer.jsx';
+import Locder from './components/Locder.jsx';
 
 const App = () => {
   const [file, setFile] = useState(null);
@@ -41,11 +42,11 @@ const App = () => {
   <input type="button" onClick={handleUpload} id="btn" />
   <label for="btn" class="btn-1">upload file</label>
   </div>
-      {downloadUrl&& (
+      {downloadUrl? (
         <a href={downloadUrl} download>
           <button>Download Transcription</button>
         </a>
-      )}
+      ):<Locder/>}
     </div>
     
     <div><Footer/></div>
